@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="manipulator1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-3.7509E-06 -0.00024161 0.022166"
+        rpy="0 0 0" />
+      <mass
+        value="0.098358" />
+      <inertia
+        ixx="2.9075E-05"
+        ixy="-5.2455E-09"
+        ixz="4.4082E-09"
+        iyy="2.8599E-05"
+        iyz="2.5549E-07"
+        izz="3.4442E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1_link">
+    <inertial>
+      <origin
+        xyz="-1.6543E-18 0.05378 2.527E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.12845" />
+      <inertia
+        ixx="6.0922E-05"
+        ixy="-5.7618E-22"
+        ixz="-6.1069E-22"
+        iyy="5.3604E-05"
+        iyz="9.5028E-22"
+        izz="5.9681E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.04525"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
