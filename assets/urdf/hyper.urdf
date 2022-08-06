@@ -9,7 +9,7 @@
   <joint name="planar" type="fixed">
     <parent link="world"/>
     <child link="base_link"/>
-     <origin xyz="0.0 0.0 0.0" rpy="-1.57 0 0" />
+     <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
   </joint>
 
   <link name="base_link">
@@ -89,7 +89,7 @@
     type="revolute">
     <origin
       xyz="0.1515 0.04025 -0.00175"
-      rpy="-1.57 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -253,7 +253,7 @@
     name="RF_joint1"
     type="revolute">
     <origin
-      xyz="0.1515 -0.00175 0.04025"
+      xyz="0.1515 -0.04025 -0.00175"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -419,7 +419,7 @@
     type="revolute">
     <origin
       xyz="-0.1025 0.04025 -0.00175"
-      rpy="-1.57 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
@@ -584,7 +584,7 @@
     type="revolute">
     <origin
       xyz="-0.1025 -0.04025 -0.00175"
-      rpy="-1.57 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child

@@ -2,7 +2,7 @@
 <robot
   name="manipulator1">
   <link
-    name="base_link">
+    name="base">
     <inertial>
       <origin
         xyz="-3.7509E-06 -0.00024161 0.022166"
@@ -42,7 +42,7 @@
     </collision>
   </link>
   <link
-    name="link1_link">
+    name="link1">
     <inertial>
       <origin
         xyz="-1.6543E-18 0.05378 2.527E-18"
@@ -88,9 +88,9 @@
       xyz="0 0 0.04525"
       rpy="1.5708 0 0" />
     <parent
-      link="base_link" />
+      link="base" />
     <child
-      link="link1_link" />
+      link="link1" />
     <axis
       xyz="0 0 1" />
     <limit
